@@ -1,12 +1,53 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import './Budget.css';
 
-
+//income stream table row component
+class incomeStream extends Component {
+ render() {
+   return (
+  <tr>
+      <td>Paycheck</td>
+      <td>$2000</td>
+      <td>2</td>
+  </tr>
+   )
+ }
+}
 //New budget finance app
 
+//model income stream as number then conver to dollars later
 class Budget extends Component {
   render() {
+
+    const Budget = {
+      "incomeStreams": [
+        { 
+          "name": "Paycheck",
+          "amount": 2000,
+          "frequency": 2,
+        },
+      ],
+    "expenses": [
+      {
+          "name": "Mortgage",
+          "amount": 2000,
+      },
+      { 
+        "name": "Paycheck",
+        "amount": 2000,
+      },
+      { 
+        "name": "Student Loans",
+        "amount": 250,
+      },
+      { 
+        "name": "Credit Card",
+        "amount": 200,
+      },
+    ]
+  }
     return (
       <div className="Budget">
         <h1><b>Budget</b></h1> <hr />
@@ -28,7 +69,7 @@ class Budget extends Component {
                     </tr>
                 </tbody>
             </table>
-</div>
+
 <div>
     <h2>Expenses:</h2><hr />
         <table>
@@ -56,15 +97,8 @@ class Budget extends Component {
             </tbody>
         </table>
         </div>
-
-
-        Mortgage: $1000 1month<br />
-        Internet: $60 1/month<br />
-        Weed: $150 1/month<br />
-        Student Loans: $250 1/month><br />
         </div>
     );
   }
 }
-
-export default Budget;
+export default Budget;  

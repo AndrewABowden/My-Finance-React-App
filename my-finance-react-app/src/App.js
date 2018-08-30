@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import Budget from "./Budget.js";
+import './Budget.css';
 
 //Home Page displays on normal startup.
 
